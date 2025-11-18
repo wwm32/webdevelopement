@@ -3,51 +3,39 @@ body {
     margin: 0;
     padding: 0;
 }
-
-
 header {
     background-color: #2B2D42;
     color: #8D99AE;
     padding: 30px;
     margin-bottom: 10px;
 }
-
 header h1, header h2 {
     color: #EDF2F4;
 }
-
 header h1 {
     font-size: 80px;
 }
-
 header h2 {
     font-size: 40px;
 }
-
 header a {
     color: #EF233C;
     text-decoration: none;
 }
-
-
 .education {
     background-color: #8D99AE;
     padding: 30px;
 }
-
-
 footer {
     background-color: #2B2D42;
     color: #8D99AE;
     padding: 30px;
     margin-top: 10px;
 }
-
 footer h1 {
     color: #EDF2F4;
     font-size: 40px;
 }
-
 footer a {
     color: #EF233C;
     text-decoration: none;

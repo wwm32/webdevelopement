@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+section {
+    width: 90%;
+    margin: 15px auto;
+    background: white;
+    padding: 15px;
+}
+
+#header {
+    background-image: url("/Labo_7/images/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 170px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 15px;
+}
+
+nav {
+    background:#777777;
+    padding: 8px;
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+nav a {
+    color: limegreen;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+article {
+    background: #eef5e7;
+    padding: 12px;
+    border: 1px solid #c9d8b8;
+    margin-bottom: 15px;
+}
+
+article h2 {
+    margin-top: 0;
+    text-decoration: underline;
+}
