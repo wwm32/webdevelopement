@@ -1,27 +1,27 @@
-/* Algemene opmaak */
+
 body {
     margin: 0;
-    padding: 10px;               /* marge links en rechts van 10px */
-    font-size: 1.25em;           /* lettergrootte 1.25 em */
+    padding: 10px;
+    font-size: 1.25em;
 }
 
 article {
     border: 1px solid #999999;
-    margin: 10px 0;              /* 10px marge tussen de artikels (boven + onder) */
-    padding: 10px;               /* zorgt voor marge links/rechts binnen article */
-    overflow: hidden;            /* moderne clearfix (beter dan ::after) */
+    margin: 10px 0;
+    padding: 10px;
+    overflow: hidden;
 }
 
-/* Alternerend floaten: oneven artikels → foto links, even artikels → foto rechts */
+
 article:nth-child(odd)  img { float: left;  }
 article:nth-child(even) img { float: right; }
 
-/* Afstand tussen foto en tekst = 10px */
+
 article img {
-    margin: 0 10px 10px 0;       /* bij float left  → marge rechts + onder */
+    margin: 0 10px 10px 0;
 }
 
-/* Bij float right moet de marge links en onder staan */
+
 article:nth-child(even) img {
     margin: 0 0 10px 10px;
 }
