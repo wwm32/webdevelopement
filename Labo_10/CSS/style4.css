@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+section {
+    width: 80%;
+    background: #fff;
+    margin: 25px auto;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #245124;
+    font-size: 1.7rem;
+    border-bottom: 2px solid #cdddc8;
+    padding-bottom: 6px;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 25px;
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+strong {
+    color: #2e5d2e;
+}
+
+a {
+    color: #2f7e2f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1c4a1c;
+    text-decoration: underline;
+}
+
+section p {
+    margin: 15px 0;
+    font-size: 1.05rem;
+}
+
+section img {
+    display: block;
+    margin-top: 12px;
+    max-width: 280px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #dde6db;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.18);
+}
+
+.large-img {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@media (max-width: 700px) {
+    section {
+        width: 92%;
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+
+    section img {
+        max-width: 100%;
+    }
+
+    .large-img {
+        max-width: 90%;
+    }
+}
+
+.vrienden-tabel {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.vrienden-tabel thead {
+    background: #263544;
+    color: white;
+}
+
+.vrienden-tabel th,
+.vrienden-tabel td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.vrienden-tabel tbody tr:nth-child(odd) {
+    background-color: #f6f7f8;
+}
+
+.vrienden-tabel tbody tr:hover {
+    background-color: #e8f2fd;
+    transition: 0.25s;
+}
+
+@media (max-width: 650px) {
+    .vrienden-tabel thead {
+        display: none;
+    }
+
+    .vrienden-tabel tr {
+        display: block;
+        margin-bottom: 14px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .vrienden-tabel td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .vrienden-tabel td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #263544;
+    }
+}

@@ -75,7 +75,7 @@ section p {
         max-width: 100%;
     }
 }
-/* === PROFESSIONELE TABELLENOPMAAK === */
+
 .vrienden-tabel {
     width: 100%;
     max-width: 1000px;
@@ -106,26 +106,23 @@ section p {
     font-size: 1.1em;
 }
 
-/* Alternerende rijen (zoals de generator met class="alt") */
 .vrienden-tabel tbody tr.alt {
     background-color: #f8f9fa;
 }
 
-/* Hover effect */
 .vrienden-tabel tbody tr:hover {
     background-color: #e3f2fd;
     transition: background-color 0.2s;
 }
 
-/* Onbekende gegevens → rood/oranje achtergrond */
 .vrienden-tabel td.onbekend {
-    background-color: #ffcdd2 !important;   /* !important omdat het alt-regel moet overrulen */
+    background-color: #ffcdd2 !important;
     color: #c62828;
     font-style: italic;
     text-align: center;
 }
 
-/* Eerste en laatste kolom iets mooier */
+
 .vrienden-tabel td:first-child,
 .vrienden-tabel th:first-child {
     border-top-left-radius: 10px;
@@ -134,15 +131,4 @@ section p {
 .vrienden-tabel td:last-child,
 .vrienden-tabel th:last-child {
     border-top-right-radius: 10px;
-}
-
-/* Mobiel vriendelijk */
-@media (max-width: 768px) {
-    .vrienden-tabel {
-        font-size: 0.9em;
-    }
-    .vrienden-tabel th,
-    .vrienden-tabel td {
-        padding: 10px 8px;
-    }
 }
