@@ -1,0 +1,25 @@
+.container{
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.container .block{
+    margin:20px;
+    padding:20px;
+    background-color: white;
+}
+
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .container > div {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}

@@ -1,0 +1,23 @@
+.container{
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.container .block{
+    margin:20px;
+    padding:20px;
+    background-color: white;
+}
+
+.block1 { grid-column: 1; grid-row: 1; }
+.block2 { grid-column: 5; grid-row: 1; }
+.block3 { grid-column: 1; grid-row: 5; }
+.block4 { grid-column: 5; grid-row: 5; }
+
+.block5 { grid-column: 3; grid-row: 1; }
+.block6 { grid-column: 3; grid-row: 2; }
+.block7 { grid-column: 3; grid-row: 3; }
+.block8 { grid-column: 3; grid-row: 4; }
+.block9 { grid-column: 3; grid-row: 5; }
