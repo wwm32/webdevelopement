@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+.kaart{
+    width: 300px;
+    padding:20px;
+    margin:20px auto;
+    border: solid 3px black;
+    background-color: lightgray;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    gap: 40px;
+}
