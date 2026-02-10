@@ -1,0 +1,106 @@
+body {
+    background-color: whitesmoke;
+    color: black;
+    font: bold 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+#subtitel {
+    margin-top: 0;
+    padding: 0;
+    border: solid 1px;
+    color:#212529;
+
+}
+
+h1 {
+    color: #212529;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+h3{
+    color: #212529;
+    padding: 5px;
+
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    column-gap: 20px;
+    color: #212529;
+    /*    flex-direction: row-reverse;*/
+}
+nav > ul > li {
+    font-size: 20px;
+}
+
+li a {
+    color: #212529;
+    display: inline;
+    border: #b03532 1px solid;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+li a:hover {
+    color: #555555;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+}
+
+header {
+    background-color: crimson;
+    margin: 0;
+    padding: 20px;
+}
+
+nav > ul > li:first-child {
+    align-self: center;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.introductie{
+    align-self: start;
+    width: 45%;
+    justify-content : space-between;
+}
+
+#foto1{
+    align-self: end;
+    align-content: end;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+
+}
+
+#foto1{
+    display: flex;
+    width: 50%;
+
+}
+
+.introductie {
+    display: flex;
+    width: 100%;
+}
+
+#box1{
+    display:block;
+    width: 45%;
+
+}

@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 10px;
-    font-size: 1.25em;
+
 }
 
 article {
@@ -13,8 +13,12 @@ article {
 }
 
 
-article:nth-child(odd)  img { float: left;  }
-article:nth-child(even) img { float: right; }
+article:nth-child(odd)  img {
+    float: left;
+}
+article:nth-child(even) img {
+    float: right;
+}
 
 
 article img {
