@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/style4.css">
+    <title>Producten</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Producten</th>
+        <th>Prijs</th>
+        <th>Aantal</th>
+        <th>BTW</th>
+        <th>Subtotaal</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Product 1</td>
+        <td class="prijs">10.00 €</td>
+        <td><input type="number" min="0" value="0" class="aantal"></td>
+        <td class="btw6">6%</td>
+        <td class="subtotaal-prijs">0.00 €</td>
+    </tr>
+    <tr>
+        <td>Product 2</td>
+        <td class="prijs">15.00 €</td>
+        <td><input type="number" min="0" value="0" class="aantal"></td>
+        <td class="btw21">21%</td>
+        <td class="subtotaal-prijs">0.00 €</td>
+    </tr>
+    <tr>
+        <td>Product 3</td>
+        <td class="prijs">12.20 €</td>
+        <td><input type="number" min="0" value="0"></td>
+        <td class="btw21">21%</td>
+        <td class="subtotaal-prijs">0.00 €</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4">Totaal</td>
+        <td id="totaal">0.00 €</td>
+    </tr>
+    </tfoot>
+</table>
+<button id="herbereken">Herberekenen</button>
+<script type="text/javascript" charset="utf-8" src="scripts/oefening_4.js"></script>
+</body>
+</html>
