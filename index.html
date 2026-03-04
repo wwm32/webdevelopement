@@ -1,113 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Web Development</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development Labs</title>
+    <meta name="description" content="A curated collection of web development lab assignments" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-<h1>Index</h1>
-<h2>Labo_2</h2>
-<ol>
-    <li><a href="Labo_2/opdracht_2.html">opdracht 2</a></li>
-    <li><a href="Labo_2/opdracht_3.html">opdracht 3</a></li>
-    <li><a href="Labo_2/opdracht_4.html">opdracht 4</a></li>
-    <li><a href="Labo_2/opdracht_5.html">opdracht 5</a></li>
-    <li><a href="Labo_2/opdracht_9.html">opdracht 9</a></li>
-</ol>
-<h2>Labo_3</h2>
-<ol>
-    <li><a href="Labo_3/opdracht_personal_homepage_assignment.html">opdracht 1</a></li>
-    <li><a href="Labo_3/opdracht_contactinformatie.html">opdracht 2</a></li>
-    <li><a href="Labo_3/opdracht_onderwijsaanbod.html">opdracht 3</a></li>
-    <li><a href="Labo_3/opdracht_personal_homepage_assignment_uitbreiding.html">opdracht 4</a></li>
-</ol>
-<h2>Labo_4</h2>
-<ol>
-    <li><a href="Labo_4/index.html">opdracht 1</a></li>
-</ol>
 
-<h2>Herhalingsoefening HTML</h2>
-<ol>
-    <li><a href="Herhalingsoefening_HTML/herhalingsoefening_html.html">Herhalingsoefening</a></li>
-</ol>
+<canvas id="sky-canvas" aria-hidden="true"></canvas>
 
-<h2>Labo_5</h2>
-<ol>
-    <li><a href="Labo_5/opdracht_6.html">opdracht 1</a></li>
-</ol>
+<div class="content">
 
-<h2>Labo_6</h2>
-<ol>
-    <li><a href="Labo_6/opdracht_1.html">opdracht 1</a></li>
-    <li><a href="Labo_6/opdracht_2.html">opdracht 2</a></li>
-    <li><a href="Labo_6/opdracht_3.html">opdracht 3</a></li>
-    <li><a href="Labo_6/opdracht_4.html">opdracht 4</a></li>
-    <li><a href="Labo_6/opdracht_5.html">opdracht 5</a></li>
+    <!-- Header -->
+    <header class="header">
+        <div class="badge">
+            <span class="badge-dot"></span>
+            <span id="badge-text"></span>
+        </div>
 
-</ol>
-<h2>Labo_7</h2>
-<ol>
-    <li><a href="Labo_7/opdracht_1(nature blog).html">opdracht 1</a></li>
-    <li><a href="Labo_7/opdracht_2(personal homepage).html">opdracht 2</a></li>
-    <li><a href="Labo_7/opdracht_3(kalender).html">opdracht 3</a></li>
-    <li><a href="Labo_7/opdracht_4.html">opdracht 4</a></li>
+        <h1>Web Development<br /><span>Labs</span></h1>
 
-</ol>
-<h2>Labo 8</h2>
-<ol>
+        <p>
+            A curated collection of web development lab assignments covering HTML, CSS,
+            JavaScript and beyond. Navigate through each module to explore the exercises.
+        </p>
 
-    <li><a href="Labo_8/opdracht_1.html">opdracht 1</a></li>
-    <li><a href="Labo_8/opdracht_2.html">opdracht 2</a></li>
-    <li><a href="Labo_8/opdracht_3.html">opdracht 3</a></li>
-</ol>
-<h2>Labo_9</h2>
-<ol>
-    <li><a href="Labo_9/opdracht_1.html">opdracht 1</a></li>
-    <li><a href="Labo_9/opdracht_2.html">opdracht 2</a></li>
-</ol>
-<h2>Labo_10</h2>
-<ol>
-    <li><a href="Labo_10/opdracht1.html">opdracht 1</a></li>
-    <li><a href="Labo_10/opdracht2.html">opdracht 2</a></li>
-    <li><a href="Labo_10/opdracht_3.html">opdracht 3</a></li>
-    <li><a href="Labo_10/opdracht_4.html">opdracht 4</a></li>
-</ol>
-<h2>Labo_11</h2>
-<ol>
-    <li><a href="Labo_11/exercise1.html">opdracht 1</a></li>
-    <li><a href="Labo_11/exercise2.html">opdracht 2</a></li>
-    <li><a href="Labo_11/exercise3.html">opdracht 3</a></li>
-    <li><a href="Labo_11/exercise4.html">opdracht 4</a></li>
-    <li><a href="Labo_11/exercise5.html">opdracht 5</a></li>
-    <li><a href="Labo_11/exercise6.html">opdracht 6</a></li>
-    <li><a href="Labo_11/beginsituatie.html">opdracht 7</a></li>
+        <div class="stats">
+            <div>
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                </svg>
+                <span id="stat-labs"></span>
+            </div>
+            <div>
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                </svg>
+                <span id="stat-assignments"></span>
+            </div>
+            <div>
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                </svg>
+                HTML, CSS &amp; JS
+            </div>
+        </div>
+    </header>
 
-</ol>
+    <!-- Card Grid -->
+    <section class="grid-section">
+        <div class="grid" id="card-grid"></div>
+    </section>
 
-<h1>JS</h1>
-<h2>Labo_13</h2>
-<ol>
-    <li><a href="Labo_13/demo%20rekenmachine/rekenmachine.html">opdracht 1</a></li>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-line"></div>
+            <span>Web Development Labs</span>
+            <div class="footer-line"></div>
+        </div>
+    </footer>
 
-</ol>
-<h2>Labo_14</h2>
-<ol>
-    <li><a href="Labo_14/oef1.html">opdracht 1</a></li>
-    <li><a href="Labo_14/oef2.html">opdracht 2</a></li>
-    <li><a href="Labo_14/oef3.html">opdracht 3</a></li>
-    <li><a href="Labo_14/oef4.html">opdracht 4</a></li>
-    <li><a href="Labo_14/oef5.html">opdracht 5</a></li>
-    <li><a href="Labo_14/oef6.html">opdracht 6</a></li>
+</div>
 
-</ol>
-<h2>Labo_15</h2>
-<ol>
-    <li><a href="Labo_15/oef1.html">opdracht 1</a></li>
-    <li><a href="Labo_15/oef2.html">opdracht 2</a></li>
-    <li><a href="Labo_15/oef3.html">opdracht 3</a></li>
-    <li><a href="Labo_15/oef4.html">opdracht 4</a></li>
-</ol>
+<script src="scripts/code.js"></script>
+<script>
+    /* ===========================
+       Lab Data & Card Renderer
+       =========================== */
 
+    let labs = [
+        {
+            title: "Labo 2",
+            accent: "#f5b942",
+            links: [
+                { href: "Labo_2/opdracht_2.html", label: "Opdracht 2" },
+                { href: "Labo_2/opdracht_3.html", label: "Opdracht 3" },
+                { href: "Labo_2/opdracht_4.html", label: "Opdracht 4" },
+                { href: "Labo_2/opdracht_5.html", label: "Opdracht 5" },
+                { href: "Labo_2/opdracht_9.html", label: "Opdracht 9" }
+            ]
+        },
+        {
+            title: "Labo 3",
+            accent: "#3b82f6",
+            links: [
+                { href: "Labo_3/opdracht_personal_homepage_assignment.html", label: "Personal Homepage" },
+                { href: "Labo_3/opdracht_contactinformatie.html", label: "Contact Info" },
+                { href: "Labo_3/opdracht_onderwijsaanbod.html", label: "Onderwijsaanbod" },
+                { href: "Labo_3/opdracht_personal_homepage_assignment_uitbreiding.html", label: "Homepage Extended" }
+            ]
+        },
+        {
+            title: "Labo 4",
+            accent: "#10b981",
+            links: [
+                { href: "Labo_4/index.html", label: "Opdracht 1" }
+            ]
+        },
+        {
+            title: "Labo 5",
+            accent: "#8b5cf6",
+            links: [
+                { href: "Labo_5/opdracht_6.html", label: "Opdracht 1" }
+            ]
+        },
+        {
+            title: "Labo 6",
+            accent: "#f43f5e",
+            links: [
+                { href: "Labo_6/opdracht_1.html", label: "Opdracht 1" },
+                { href: "Labo_6/opdracht_2.html", label: "Opdracht 2" },
+                { href: "Labo_6/opdracht_3.html", label: "Opdracht 3" },
+                { href: "Labo_6/opdracht_4.html", label: "Opdracht 4" },
+                { href: "Labo_6/opdracht_5.html", label: "Opdracht 5" }
+            ]
+        },
+        {
+            title: "Labo 7",
+            accent: "#06b6d4",
+            links: [
+                { href: "Labo_7/opdracht_1(nature blog).html", label: "Nature Blog" },
+                { href: "Labo_7/opdracht_2(personal homepage).html", label: "Personal Homepage" },
+                { href: "Labo_7/opdracht_3(kalender).html", label: "Kalender" },
+                { href: "Labo_7/opdracht_4.html", label: "Opdracht 4" }
+            ]
+        },
+        {
+            title: "Labo 8",
+            accent: "#f97316",
+            links: [
+                { href: "Labo_8/opdracht_1.html", label: "Opdracht 1" },
+                { href: "Labo_8/opdracht_2.html", label: "Opdracht 2" },
+                { href: "Labo_8/opdracht_3.html", label: "Opdracht 3" }
+            ]
+        },
+        {
+            title: "Labo 9",
+            accent: "#ec4899",
+            links: [
+                { href: "Labo_9/opdracht_1.html", label: "Opdracht 1" },
+                { href: "Labo_9/opdracht_2.html", label: "Opdracht 2" }
+            ]
+        },
+        {
+            title: "Labo 10",
+            accent: "#14b8a6",
+            links: [
+                { href: "Labo_10/opdracht1.html", label: "Opdracht 1" },
+                { href: "Labo_10/opdracht2.html", label: "Opdracht 2" },
+                { href: "Labo_10/opdracht_3.html", label: "Opdracht 3" },
+                { href: "Labo_10/opdracht_4.html", label: "Opdracht 4" }
+            ]
+        },
+        {
+            title: "Labo 11",
+            accent: "#a855f7",
+            links: [
+                { href: "Labo_11/exercise1.html", label: "Exercise 1" },
+                { href: "Labo_11/exercise2.html", label: "Exercise 2" },
+                { href: "Labo_11/exercise3.html", label: "Exercise 3" },
+                { href: "Labo_11/exercise4.html", label: "Exercise 4" },
+                { href: "Labo_11/exercise5.html", label: "Exercise 5" },
+                { href: "Labo_11/exercise6.html", label: "Exercise 6" },
+                { href: "Labo_11/beginsituatie.html", label: "Beginsituatie" }
+            ]
+        },
+        {
+            title: "JavaScript",
+            accent: "#eab308",
+            links: [
+                { href: "Labo_13/demo%20rekenmachine/rekenmachine.html", label: "Labo 13 - Rekenmachine" },
+                { href: "Labo_14/oef1.html", label: "Labo 14 - Oef 1" },
+                { href: "Labo_14/oef2.html", label: "Labo 14 - Oef 2" },
+                { href: "Labo_14/oef3.html", label: "Labo 14 - Oef 3" },
+                { href: "Labo_14/oef4.html", label: "Labo 14 - Oef 4" },
+                { href: "Labo_14/oef5.html", label: "Labo 14 - Oef 5" },
+                { href: "Labo_14/oef6.html", label: "Labo 14 - Oef 6" },
+                { href: "Labo_15/oef1.html", label: "Labo 15 - Oef 1" },
+                { href: "Labo_15/oef2.html", label: "Labo 15 - Oef 2" },
+                { href: "Labo_15/oef3.html", label: "Labo 15 - Oef 3" },
+                { href: "Labo_15/oef4.html", label: "Labo 15 - Oef 4" }
+            ]
+        }
+    ];
+
+    // Compute stats
+    let totalAssignments = labs.reduce(function (acc, lab) {
+        return acc + lab.links.length;
+    }, 0);
+
+    document.getElementById("badge-text").textContent =
+        totalAssignments + " assignments across " + labs.length + " labs";
+    document.getElementById("stat-labs").textContent = labs.length + " Lab Modules";
+    document.getElementById("stat-assignments").textContent = totalAssignments + " Total Assignments";
+
+    // Build cards
+    let grid = document.getElementById("card-grid");
+
+    labs.forEach(function (lab, index) {
+        let card = document.createElement("div");
+        card.className = "card";
+        card.style.animationDelay = index * 80 + "ms";
+
+        let shortNum = lab.title.replace(/[^0-9]/g, "").slice(0, 2) || "JS";
+
+        let linksHTML = lab.links
+            .map(function (link) {
+                return (
+                    '<a class="card-link" href="' + link.href + '">' +
+                    '<span class="dot" style="background-color:' + lab.accent + '"></span>' +
+                    '<span>' + link.label + '</span>' +
+                    '<svg class="chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">' +
+                    '<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />' +
+                    '</svg>' +
+                    '</a>'
+                );
+            })
+            .join("");
+
+        let count = lab.links.length;
+
+        card.innerHTML =
+            '<div class="card-accent" style="background:linear-gradient(90deg,transparent,' + lab.accent + ',transparent)"></div>' +
+            '<div class="card-glow" style="background:radial-gradient(circle,' + lab.accent + ',transparent 70%)"></div>' +
+            '<div class="card-body">' +
+            '<div class="card-header">' +
+            '<div class="card-icon" style="background:' + lab.accent + '15;color:' + lab.accent + ';border:1px solid ' + lab.accent + '30">' +
+            shortNum +
+            '</div>' +
+            '<h2 class="card-title">' + lab.title + '</h2>' +
+            '</div>' +
+            '<div class="card-divider"></div>' +
+            '<div class="card-links">' + linksHTML + '</div>' +
+            '<div class="card-footer">' +
+            '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">' +
+            '<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />' +
+            '</svg>' +
+            count + (count === 1 ? " assignment" : " assignments") +
+            '</div>' +
+            '</div>';
+
+        grid.appendChild(card);
+    });
+</script>
 
 </body>
 </html>
