@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/style1.css">
+    <title>Formulier</title>
+</head>
+<body>
+
+<form action="" method="post" class="formulier">
+
+    <h2 class="title">Persoonlijke informatie</h2>
+    <section class="container">
+        <section class="form-sectie">
+            <label for="voornaam">Voornaam*:</label>
+            <input type="text" id="voornaam" name="voornaam" placeholder="Your first name" required autofocus>
+        </section>
+        <section class="form-sectie">
+            <label for="familienaam">Familienaam*:</label>
+            <input type="text" id="familienaam" name="familienaam" placeholder="Your last name" required>
+        </section>
+    </section>
+
+    <h2 class="title">Sport</h2>
+    <section class="container">
+        <section class="form-sectie">
+            <p>Welke sport beoefen je?</p>
+            <input type="checkbox" name="sport[]" value="Lopen"> Lopen<br>
+            <input type="checkbox" name="sport[]" value="Zwemmen"> Zwemmen<br>
+            <input type="checkbox" name="sport[]" value="Roeien"> Roeien<br>
+        </section>
+        <section class="form-sectie">
+            <!-- leeg gelaten zoals bij jou -->
+        </section>
+    </section>
+
+    <h2 class="title">Communicatievoorkeur</h2>
+    <section class="container">
+        <section class="form-sectie">
+            <p>Hoe kunnen we je bereiken?</p>
+            <input type="radio" name="contact" value="post"> Per post<br>
+            <input type="radio" name="contact" value="email"> E-mail<br>
+        </section>
+    </section>
+
+    <h2 class="title">Favorieten</h2>
+    <section class="container">
+        <section class="form-sectie">
+            <label for="film">Favoriete film:</label>
+            <input type="text" id="film" name="film" placeholder="Schrijf je favoriete quote">
+        </section>
+        <section class="form-sectie">
+            <label for="quote">Favoriete quote:</label>
+            <input type="text" id="quote" name="quote" placeholder="Schrijf je favoriete quote">
+        </section>
+        <section class="form-sectie">
+            <label for="eten">Favoriete eten:</label>
+            <select id="eten" name="eten">
+                <option>Hamburger</option>
+                <option>Hot-dog</option>
+                <option>Pizza</option>
+            </select>
+        </section>
+        <section class="form-sectie">
+            <label for="browser">Favoriete browser:</label>
+            <input type="text" id="browser" name="browser" placeholder="Favoriete browser">
+        </section>
+    </section>
+
+    <h2 class="title">Beveiliging & contact</h2>
+    <section class="container">
+        <section class="form-sectie">
+            <label for="wachtwoord">Wachtwoord*:</label>
+            <input type="password" id="wachtwoord" name="wachtwoord" required>
+        </section>
+        <section class="form-sectie">
+            <label for="email">E-mailadres*:</label>
+            <input type="email" id="email" name="email" placeholder="Geef e-mailadres in" required>
+        </section>
+        <section class="form-sectie">
+            <label for="site">Favoriete site:</label>
+            <input type="url" id="site" name="site" placeholder="Geef de URL van je favoriete site">
+        </section>
+    </section>
+
+    <h2 class="title">Extra informatie</h2>
+    <section class="container">
+        <section class="form-sectie">
+            <label for="getal">Favoriete getal 1-10:</label>
+            <input type="number" id="getal" name="getal" min="1" max="10">
+        </section>
+        <section class="form-sectie">
+            <label for="geboorte">Wanneer ben je geboren?</label>
+            <input type="date" id="geboorte" name="geboorte">
+        </section>
+        <section class="form-sectie">
+            <label for="postcode">Belgische postcode*:</label>
+            <input type="text" id="postcode" name="postcode" placeholder="9999" required>
+        </section>
+    </section>
+
+    <h2 class="title">Varia</h2>
+    <section class="container">
+        <section class="form-sectie">
+            <label for="zoeken">Zoeken naar iets:</label>
+            <input type="text" id="zoeken" name="zoeken" placeholder="">
+        </section>
+        <section class="form-sectie">
+            <label for="kleur">Wat is je lievelingskleur</label>
+            <input type="color" id="kleur" name="kleur">
+        </section>
+        <section class="form-sectie">
+            <label>Bestand kiezen:</label>
+            <input type="file" name="bestand">
+        </section>
+    </section>
+
+    <section class="container">
+        <input type="submit" value="Submit">
+    </section>
+
+</form>
+
+<script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
+</body>
+</html>

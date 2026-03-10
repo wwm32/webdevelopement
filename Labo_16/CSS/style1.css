@@ -1,0 +1,11 @@
+body{
+    max-width: 960px;
+    margin: 20px;
+}
+.container{
+
+    border: #212529 solid 1px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
