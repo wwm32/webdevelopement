@@ -1,0 +1,41 @@
+#spel {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    gap: 10px;
+    width: max-content;
+    margin: 40px auto;
+}
+.kaart {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #444;
+    cursor: pointer;
+    transition: border 0.2s;
+}
+.verborgen {
+    visibility: hidden;
+}
+.juist {
+    border: 2px solid lime;
+}
+.fout {
+    border: 2px solid red;
+}
+#info {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#keuze {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#keuze button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 5px;
+    cursor: pointer;
+}

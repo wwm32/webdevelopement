@@ -1,0 +1,22 @@
+html, body {
+    margin: 0px;
+}
+
+#speelveld {
+    position: relative;
+    border: solid 1px black;
+    box-sizing: border-box;
+    width: 600px;
+    height: 800px;
+}
+
+.sprite {
+    position: absolute;
+    cursor: pointer;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
