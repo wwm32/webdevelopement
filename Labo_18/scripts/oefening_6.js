@@ -1,4 +1,4 @@
-const setup = () => {
+hoe maak je dit beter: const setup = () => {
     let sliders = document.getElementsByClassName("slider");
 
     for (let i = 0; i < sliders.length; i++) {
