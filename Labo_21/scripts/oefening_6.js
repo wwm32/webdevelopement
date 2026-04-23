@@ -1,30 +1,29 @@
-let aantaldivs = document.getElementsByClassName("savedWrapper");
-
 const setup = () => {
-
 
     let sliders = document.querySelectorAll(".slider");
     for (let i = 0; i < sliders.length; i++) {
         sliders[i].addEventListener("input", update);
     }
-    updateDataDivs()
 
     document.getElementById("saveBtn").addEventListener("click", save);
     document.getElementById("clearBtn").addEventListener("click", clear);
-
 
     let r = localStorage.getItem("rValue");
     let g = localStorage.getItem("gValue");
     let b = localStorage.getItem("bValue");
 
-    document.getElementById("sliderR").value = r;
-    document.getElementById("sliderG").value = g;
-    document.getElementById("sliderB").value = b;
-
+    if (r != null) {
+        document.getElementById("sliderR").value = r;
+        document.getElementById("sliderG").value = g;
+        document.getElementById("sliderB").value = b;
+        update();
+    }
 
     let savedColors = JSON.parse(localStorage.getItem("kleuren"));
-    for (let color of savedColors) {
-        addColorDiv(color);
+    if (savedColors != null) {
+        for (let color of savedColors) {
+            addColorDiv(color);
+        }
     }
 }
 
@@ -94,7 +93,7 @@ const updateDataDivs = () => {
 
 const checkZelfdeKleuren = (colorString) => {
     let savedColors = JSON.parse(localStorage.getItem("kleuren"));
-    return !savedColors.includes(colorString);
+    return savedColors == null || !savedColors.includes(colorString);
 }
 
 document.addEventListener("DOMContentLoaded", setup);
