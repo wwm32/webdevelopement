@@ -1,15 +1,13 @@
 const setup = () => {
-    let sliders = document.getElementsByClassName("slider");
-
+    let sliders = document.querySelectorAll(".slider");
     for (let i = 0; i < sliders.length; i++) {
-        sliders[i].addEventListener("change", update);
         sliders[i].addEventListener("input", update);
     }
 
-    document.getElementById("saveBtn").addEventListener("click", saveSwatch);
+    let buttonSave = document.getElementById("saveBtn")
+    buttonSave.addEventListener("click", save)
 
-    update();
-};
+}
 
 const update = () => {
     let r = document.getElementById("sliderR").value;
@@ -20,47 +18,33 @@ const update = () => {
     document.getElementById("valueG").textContent = g;
     document.getElementById("valueB").textContent = b;
 
-    document.getElementById("colorDemo").style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-};
+    let colorDemo = document.getElementById("colorDemo");
+    colorDemo.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
 
-const saveSwatch = () => {
+
+}
+
+const save = () => {
     let r = document.getElementById("sliderR").value;
     let g = document.getElementById("sliderG").value;
     let b = document.getElementById("sliderB").value;
 
-    let wrapper = document.createElement("div");
-    wrapper.className = "savedWrapper";
+    let savedColors = document.getElementById("savedColors");
 
-    let swatch = document.createElement("div");
-    swatch.className = "savedSwatch";
-    swatch.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-    swatch.setAttribute("data-r", r);
-    swatch.setAttribute("data-g", g);
-    swatch.setAttribute("data-b", b);
-    swatch.addEventListener("click", swatchClicked);
+    let deletebtn = document.createElement("button");
+    deletebtn.innerText = "X";
+    deletebtn.setAttribute("class", "deleteBtn");
+    deletebtn.addEventListener("click", deleteDiv);
 
-    let deleteBtn = document.createElement("button");
-    deleteBtn.className = "deleteBtn";
-    deleteBtn.textContent = "X";
-    deleteBtn.addEventListener("click", deleteClicked);
+    let div = document.createElement("div");
+    div.style.background = `rgb(${r}, ${g}, ${b})`;
+    div.setAttribute("class", "savedWrapper");
+    div.appendChild(deletebtn);
+    savedColors.appendChild(div);
+}
 
-    wrapper.appendChild(swatch);
-    wrapper.appendChild(deleteBtn);
-    document.getElementById("savedColors").appendChild(wrapper);
-};
+const deleteDiv = (e) => {
+    e.currentTarget.parentNode.remove();
+}
 
-const swatchClicked = (event) => {
-    let swatch = event.currentTarget;
-    document.getElementById("sliderR").value = swatch.getAttribute("data-r");
-    document.getElementById("sliderG").value = swatch.getAttribute("data-g");
-    document.getElementById("sliderB").value = swatch.getAttribute("data-b");
-    update();
-};
-
-const deleteClicked = (event) => {
-    let deleteBtn = event.currentTarget;
-    let wrapper = deleteBtn.parentNode;
-    wrapper.parentNode.removeChild(wrapper);
-};
-
-window.addEventListener("load", setup);
+document.addEventListener("DOMContentLoaded", setup);

@@ -1,0 +1,60 @@
+#colorpicker {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 5px;
+    gap: 8px;
+}
+
+#sliders {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    align-items: center;
+    gap: 2px 5px;
+}
+
+#sliders input[type="range"] {
+    width: 150px;
+}
+
+.colorDemo {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+}
+
+
+#savedColors {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+.savedWrapper {
+    position: relative;
+    width: 80px;
+    height: 70px;
+}
+
+.savedSwatch {
+    width: 80px;
+    height: 70px;
+    border: 1px solid black;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+.deleteBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    padding: 0;
+    cursor: pointer;
+    line-height: 1;
+}
