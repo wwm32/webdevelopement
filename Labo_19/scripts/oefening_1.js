@@ -4,67 +4,66 @@ let global = {
     IMAGE_PATH_PREFIX: "images/",
     IMAGE_PATH_SUFFIX: ".png",
     MOVE_DELAY: 3000,
-    BOMB_INDEX: 0,
-    huidigIndex: 0,
     score: 0,
-    timeoutId: 0
+    intervalId: 0,
+    huidigIndex: 0
 };
 
-const speelveld = document.getElementById("speelveld");
-const sprite = document.querySelector(".sprite");
+const setup = () => {
+    let speelveld = document.getElementById("speelveld");
+    let sprite = document.querySelector(".sprite");
+    sprite.style.display = "none";
+    let score = document.createElement("p");
+    score.className = "score";
+    score.textContent = "score: " + global.score;
+    speelveld.appendChild(score);
+    let btnPlay = document.createElement("button");
+    btnPlay.setAttribute("class", "chips");
+    btnPlay.textContent = "Play";
+    speelveld.appendChild(btnPlay);
+    btnPlay.addEventListener("click", () => play(sprite));
+    sprite.addEventListener("click", () => clickSprite(sprite));
+}
 
-// Score display aanmaken
-const scoreDisplay = document.createElement("p");
-scoreDisplay.textContent = "Score: 0";
-speelveld.appendChild(scoreDisplay);
+const play = (sprite) => {
+    spawnSprite(sprite);
+    global.intervalId = setInterval(() => spawnSprite(sprite), global.MOVE_DELAY);
+}
 
-// Startknop aanmaken
-const startKnop = document.createElement("button");
-startKnop.textContent = "Start";
-speelveld.appendChild(startKnop);
-
-sprite.style.display = "none";
-
-function willekeurigePositie() {
-    const maxX = speelveld.clientWidth - global.IMAGE_SIZE;
-    const maxY = speelveld.clientHeight - global.IMAGE_SIZE;
+const randomPlace = () => {
+    let speelveld = document.getElementById("speelveld");
+    let maxX = speelveld.clientWidth - global.IMAGE_SIZE;
+    let maxY = speelveld.clientHeight - global.IMAGE_SIZE;
     return {
         x: Math.floor(Math.random() * maxX),
         y: Math.floor(Math.random() * maxY)
-    };
+    }
 }
 
-function toonNieuweAfbeelding() {
-    const positie = willekeurigePositie();
-    sprite.style.left = positie.x + "px";
-    sprite.style.top = positie.y + "px";
-
+const spawnSprite = (sprite) => {
+    let position = randomPlace();
     global.huidigIndex = Math.floor(Math.random() * global.IMAGE_COUNT);
     sprite.src = global.IMAGE_PATH_PREFIX + global.huidigIndex + global.IMAGE_PATH_SUFFIX;
+    sprite.style.left = position.x + "px";
+    sprite.style.top = position.y + "px";
     sprite.style.display = "block";
-
-    global.timeoutId = setTimeout(function () {
-        toonNieuweAfbeelding();
-    }, global.MOVE_DELAY);
 }
 
-sprite.addEventListener("click", function () {
-    if (global.huidigIndex === global.BOMB_INDEX) {
-        clearTimeout(global.timeoutId);
+const clickSprite = (sprite) => {
+    clearInterval(global.intervalId);
+    if (global.huidigIndex === 0) {
         sprite.style.display = "none";
-        alert("BOEM! Je klikte op een bom. Eindscore: " + global.score);
-        startKnop.style.display = "block";
+        setTimeout(() => {
+            window.alert("Je hebt op de bom geklikt!\nscore: " + global.score);
+            global.score = 0;
+            document.querySelector(".score").textContent = "score: " + global.score;
+        }, 10);
     } else {
-        global.score++;
-        scoreDisplay.textContent = "Score: " + global.score;
-        clearTimeout(global.timeoutId);
-        toonNieuweAfbeelding();
+        global.score += 1;
+        document.querySelector(".score").textContent = "score: " + global.score;
+        spawnSprite(sprite);
+        global.intervalId = setInterval(() => spawnSprite(sprite), global.MOVE_DELAY);
     }
-});
+}
 
-startKnop.addEventListener("click", function () {
-    global.score = 0;
-    scoreDisplay.textContent = "Score: 0";
-    startKnop.style.display = "none";
-    toonNieuweAfbeelding();
-});
+document.addEventListener("DOMContentLoaded", setup);

@@ -16,6 +16,11 @@ html, body {
     cursor: pointer;
 }
 
+.chips{
+    height: 20px;
+    width: 40px;
+}
+
 .unselectable {
     -webkit-user-select: none;
     -moz-user-select: none;
