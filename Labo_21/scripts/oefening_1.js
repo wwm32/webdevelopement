@@ -52,7 +52,6 @@ const save = () => {
     if(checkZelfdeKleuren(colorString)) {
         addColorDiv(colorString);
         updateDataDivs();
-        console.log(aantaldivs.length);
     }
 
 }
