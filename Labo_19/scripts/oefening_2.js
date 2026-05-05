@@ -36,10 +36,10 @@ const startSpel = () => {
     for (let k of kaarten) {
         let img = document.createElement('img');
         img.src = `images/achterkant.png`;
-        img.dataset.voorkant = `images/${k}`; // geen extra .png
+        img.dataset.voorkant = `images/${k}`;
         img.classList.add('kaart');
-        img.addEventListener('click', () => klikOpKaart(img)); // arrow function
-        global.spelDiv.appendChild(img); // global.spelDiv
+        img.addEventListener('click', () => klikOpKaart(img));
+        global.spelDiv.appendChild(img);
     }
 }
 
@@ -56,15 +56,15 @@ const klikOpKaart = (img) => {
     img.src = img.dataset.voorkant;
     img.classList.add('omgedraaid');
     global.openKaarten.push(img);
-    if (global.aantalGelijkeKaarten === global.openKaarten.length) { // global.
+    if (global.aantalGelijkeKaarten === global.openKaarten.length) {
         global.pogingen++;
-        global.pogingenSpan.textContent = global.pogingen; // global.
+        global.pogingenSpan.textContent = global.pogingen;
         controleerMatch();
     }
 }
 
 const controleerMatch = () => {
-    global.isBusy = true; // global.
+    global.isBusy = true;
     let eerste = global.openKaarten[0].dataset.voorkant;
     let gelijk = true;
     for (let i = 1; i < global.openKaarten.length; i++) {
@@ -80,13 +80,13 @@ const controleerMatch = () => {
             checkEinde();
         }, 700)
     } else {
-        global.openKaarten.forEach(k => k.classList.add('fout')); // add ipv remove
+        global.openKaarten.forEach(k => k.classList.add('fout'));
         setTimeout(() => {
             global.openKaarten.forEach(k => {
                 k.src = "images/achterkant.png";
                 k.classList.remove('fout', 'omgedraaid');
             });
-            resetState(); // resetState toevoegen
+            resetState();
         }, 900)
     }
 }
